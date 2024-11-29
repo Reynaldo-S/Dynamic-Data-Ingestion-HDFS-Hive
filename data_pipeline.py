@@ -41,7 +41,7 @@ def upload_to_hdfs(local_path, hdfs_path):
         else:
             print(f"Failed to create HDFS directory: {result.stderr}")
         
-        # Upload the file from the local file path inside the Namenode container to HDFS
+        # Upload the file to HDFS
         result = subprocess.run(["docker", "exec", "docker-hive-hive-server-1", "hdfs", "dfs", "-put", local_path, hdfs_path], stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
         if result.returncode == 0:
             print(f"Uploaded {local_path} to HDFS at {hdfs_path}")

@@ -9,7 +9,7 @@ This project implements a data pipeline that fetches data from a provided URL, s
 - **HDFS**: For storing data in the Hadoop Distributed File System.
 - **Hive**: For data analysis and query execution.
 - **API (requests)**: For fetching data from the URL.
-- **Subprocess & Shell scripting**: For interacting with Hadoop and Hive via Docker.
+- **Subprocess**: For interacting with Hadoop and Hive via Docker.
 
 ## Project Workflow
 
@@ -37,9 +37,6 @@ This project implements a data pipeline that fetches data from a provided URL, s
     ```
 
 2. Install Python dependencies:
-    ```bash
-    pip install -r requirements.txt
-    ```
 
 3. Configure your Hadoop & Hive environments in Docker:
     - Ensure Docker containers for Hadoop and Hive are running.
